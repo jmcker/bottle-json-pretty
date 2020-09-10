@@ -2,7 +2,7 @@
 
 import sys
 from os import path
-from setuptools import setup
+from setuptools import find_packages, setup
 
 if sys.version_info < (2, 7):
     raise NotImplementedError('Sorry, you need at least Python 2.7 or Python 3.4+ to use bottle.')
@@ -26,6 +26,7 @@ setup(
     install_requires=['bottle'],
     license='MIT',
     platforms='any',
+    packages=find_packages(),
     classifiers=[
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
